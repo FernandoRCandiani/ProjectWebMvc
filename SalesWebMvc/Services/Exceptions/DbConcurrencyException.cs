@@ -1,4 +1,6 @@
-﻿namespace SalesWebMvc.Services.Exceptions
+﻿using System;
+
+namespace SalesWebMvc.Services.Exceptions
 {
     public class DbConcurrencyException : ApplicationException
     {

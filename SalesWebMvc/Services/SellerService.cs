@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using SalesWebMvc.Services.Exceptions;
+using System;
 
 namespace SalesWebMvc.Services
 {
@@ -43,7 +44,7 @@ namespace SalesWebMvc.Services
         {
             if (!_context.Seller.Any(x => x.Id == obj.Id))
             {
-                throw NotFoundException("Id not found");
+                throw new NotFoundException("Id not found");
             }
 
             try
